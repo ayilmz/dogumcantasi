@@ -1,0 +1,86 @@
+{
+  "header": [
+    {
+      "text": "Videolar",
+      "link": "/videolar"
+    },
+    {
+      "text": "Sıkça Sorulan Sorular",
+      "link": "/sss"
+    },
+    {
+      "text": "22 Sıkça Sorulan Sorular",
+      "link": "/sss"
+    }
+  ],
+  "bagTypes": [
+    {
+      "name": "Mini Doğum Çantası",
+      "price": "450,00 TL",
+      "popular": false
+    },
+    {
+      "name": "Standart Doğum Çantası",
+      "price": "650,00 TL",
+      "popular": true,
+      "products": [
+        {
+          "image": "/image/product-image-1.jpeg",
+          "title": "Yenidoğan Ağız Mendili"
+        },
+        {
+          "image": "/image/product-image-2.jpeg",
+          "title": "Yenidoğan Kız Bebek 5li Askı Hastane Çıkışı"
+        },
+        {
+          "image": "/image/product-image-3.jpeg",
+          "title": "Organik Tulum Body Şapka Set"
+        },
+        {
+          "image": "/image/product-image-4.jpeg",
+          "title": "Bebek Bezi Premium Care 30 Adet"
+        },
+        {
+          "image": "/image/product-image-5.jpeg",
+          "title": "Bebek Temizleme Pamuğu 60’lı"
+        },
+        {
+          "image": "/image/product-image-6.jpeg",
+          "title": "Yıldızlı Kundak Havlu"
+        }
+      ]
+    },
+    {
+      "name": "Premium Doğum Çantası",
+      "price": "950,00 TL",
+      "popular": false
+    }
+  ],
+  "highlights": [
+    {
+      "image": "/image/highlights-1.jpeg",
+      "title": "Çanta Modeli",
+      "price": "+120 TL"
+    },
+    {
+      "image": "/image/highlights-2.jpeg",
+      "title": "Çanta Modeli",
+      "price": "+140 TL"
+    },
+    {
+      "image": "/image/highlights-3.jpeg",
+      "title": "Çanta Modeli",
+      "price": "+80 TL"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Neler olmalı ? Neler Gereksiz ?",
+      "url": ""
+    },
+    {
+      "title": "Neler olmalı ? Neler Gereksiz ?",
+      "url": ""
+    }
+  ]
+}
