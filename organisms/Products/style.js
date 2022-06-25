@@ -4,13 +4,15 @@ export const StyledTabs = styled.div`
   display: flex;
   align-items: end;
   margin-top: 120px;
+  width: 100%;
 `;
 export const StyledButton = styled.button`
   background: #F5F5F5;
   border: 0;
-  padding: 20px 30px;
+  padding: 20px;
   border-radius: 24px 24px 0 0;
   text-align: center;
+  width: 100%;
   &:first-child{
     border-top-right-radius: 0;
   }
@@ -46,4 +48,10 @@ export const StyledButton = styled.button`
       }
     }
   }
+`;
+
+export const StyledProductTabContainer = styled.div`
+  background-color: white;
+  border: 5px solid #FFE0D9;
+  border-radius: 24px;
 `;

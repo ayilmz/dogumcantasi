@@ -1,4 +1,4 @@
-import { StyledButton, StyledTabs } from './style'
+import { StyledButton, StyledTabs, StyledProductTabContainer } from './style'
 import ProductCard from "../ProductCard";
 import Image from "next/image";
 const Products = ({bagTypes, highlights}) => {
@@ -14,7 +14,7 @@ const Products = ({bagTypes, highlights}) => {
                     ))}
                 </StyledTabs>
             </div>
-            <div className="container d-none">
+            <StyledProductTabContainer className="container">
                 {bagTypes?.map((type, index) => (
                     <ul key={index}>
                         {type.products?.map((product, index) => (
@@ -23,7 +23,7 @@ const Products = ({bagTypes, highlights}) => {
                     </ul>
                 ))}
                 {highlights?.map((highlight, index) => (
-                    <ul key={index}>
+                    <ul key={index} className="d-none">
                         <li>
                             <p>{highlight.title}</p>
                             <p>{highlight.price}</p>
@@ -32,7 +32,7 @@ const Products = ({bagTypes, highlights}) => {
                     </ul>
                 ))}
 
-            </div>
+            </StyledProductTabContainer>
         </div>
     )
 };
