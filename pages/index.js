@@ -21,7 +21,7 @@ export default function Home({bagTypes, highlights, videos, header}) {
   )
 }
 export async function getServerSideProps(ctx) {
-  const res = await fetch(`http://www.flashtr.com/dogum-cantasi/data.json`)
+  const res = await fetch(`https://dogumcantasi.vercel.app/api/data.json`)
   const { bagTypes, highlights, videos, header } = await res.json()
 
   return {
