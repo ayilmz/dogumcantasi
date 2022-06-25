@@ -1,4 +1,4 @@
-import { StyledButton, StyledTabs, StyledProductTabContainer } from './style'
+import { StyledButton, StyledTabs, StyledProductTabContainer, StyledPopularIcon } from './style'
 import ProductCard from "../ProductCard";
 import Image from "next/image";
 const Products = ({bagTypes, highlights}) => {
@@ -8,6 +8,12 @@ const Products = ({bagTypes, highlights}) => {
                 <StyledTabs>
                     {bagTypes?.map((type, index) => (
                         <StyledButton key={index} className={type.popular ? 'popular' : ''}>
+                            {type.popular && (
+                                <StyledPopularIcon>
+                                    <Image src="/image/popular-icon.svg" width={75} height={23} alt="Doğum Çantası" />
+                                </StyledPopularIcon>
+                            )}
+
                             <p className="title">{type.name}</p>
                             <p className="price">{type.price}</p>
                         </StyledButton>
@@ -16,7 +22,7 @@ const Products = ({bagTypes, highlights}) => {
             </div>
             <StyledProductTabContainer className="container">
                 {bagTypes?.map((type, index) => (
-                    <ul key={index}>
+                    <ul key={index} className="p-0">
                         {type.products?.map((product, index) => (
                             <ProductCard product={product}  key={index} />
                         ))}

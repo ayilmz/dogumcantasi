@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { StyledProduct } from "./style"
 
 const ProductCard = ({product}) => {
     return (
-        <li>
+        <StyledProduct>
             <Image src={product.image} width={106} height={106} alt={product.title} />
             <p>{product.title}</p>
-        </li>
+        </StyledProduct>
     )
 }
 

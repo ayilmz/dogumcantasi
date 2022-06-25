@@ -6,6 +6,11 @@ export const StyledTabs = styled.div`
   margin-top: 120px;
   width: 100%;
 `;
+export const StyledPopularIcon = styled.div`
+  position: absolute;
+  left: 50%;
+  top: -10px;
+`;
 export const StyledButton = styled.button`
   background: #F5F5F5;
   border: 0;
@@ -13,6 +18,7 @@ export const StyledButton = styled.button`
   border-radius: 24px 24px 0 0;
   text-align: center;
   width: 100%;
+  position: relative;
   &:first-child{
     border-top-right-radius: 0;
   }
