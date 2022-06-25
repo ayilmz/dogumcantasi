@@ -9,6 +9,7 @@ export const StyledProduct = styled.li`
   height: 214px;
   position: relative;
   margin: 8px;
+  text-align: center;
   p{
     position: absolute;
     bottom: 0;
@@ -22,5 +23,6 @@ export const StyledProduct = styled.li`
     color: #747474;
     letter-spacing: 0.03em;
     height: 38px;
+    text-align: left;
   }
 `;
