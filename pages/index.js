@@ -7,7 +7,7 @@ export default function Home({bagTypes, highlights, videos, header}) {
   return (
       <div>
           <Header header={header} />
-          <div className="container">
+          <div className="container d-none">
               <div className="row">
                   <Products bagTypes={bagTypes} highlights={highlights} />
                   <div className="col-12 col-md-6">
