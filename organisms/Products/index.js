@@ -3,18 +3,18 @@ import ProductCard from "../ProductCard";
 import Image from "next/image";
 const Products = ({bagTypes, highlights}) => {
     return (
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-7">
             <div className="container d-flex justify-content-between">
                 <StyledTabs>
                     {bagTypes?.map((type, index) => (
-                        <StyledButton popular={type.popular} key={index}>
-                            <span>{type.name}</span>
-                            <span>{type.price}</span>
+                        <StyledButton key={index} className={type.popular ? 'popular' : ''}>
+                            <p className="title">{type.name}</p>
+                            <p className="price">{type.price}</p>
                         </StyledButton>
                     ))}
                 </StyledTabs>
             </div>
-            <div className="container">
+            <div className="container d-none">
                 {bagTypes?.map((type, index) => (
                     <ul key={index}>
                         {type.products?.map((product, index) => (

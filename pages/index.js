@@ -7,10 +7,10 @@ export default function Home({bagTypes, highlights, videos, header}) {
   return (
       <div>
           <Header header={header} />
-          <div className="container d-none">
+          <div className="container">
               <div className="row">
                   <Products bagTypes={bagTypes} highlights={highlights} />
-                  <div className="col-12 col-md-6">
+                  <div className="col-12 col-md-5  d-none">
                       {homepage.VIDEO_TITLE}
                       <Video videos={videos} />
                   </div>
