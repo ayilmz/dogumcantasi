@@ -10,7 +10,7 @@ const Products = ({bagTypes, highlights}) => {
                         <StyledButton key={index} className={type.popular ? 'popular' : ''}>
                             {type.popular && (
                                 <StyledPopularIcon>
-                                    <Image src="/image/popular-icon.svg" width={75} height={23} alt="Doğum Çantası" />
+                                    <Image src="/image/popular-icon.svg" width={75} height={23} alt="Popüler Ürün" />
                                 </StyledPopularIcon>
                             )}
 
