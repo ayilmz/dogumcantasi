@@ -1,4 +1,13 @@
-import { StyledButton, StyledTabs, StyledProductTabContainer, StyledPopularIcon } from './style'
+import {
+    StyledButton,
+    StyledTabs,
+    StyledProductTabContainer,
+    StyledPopularIcon,
+    StyledProducts,
+    StyledSelectedProducts,
+    StyledSelectedProductTitle,
+    StyledSelectedProductPrice, StyledSelectedProductContainer, StyledSelectedProductLI
+} from './style'
 import ProductCard from "../ProductCard";
 import Image from "next/image";
 const Products = ({bagTypes, highlights}) => {
@@ -22,22 +31,23 @@ const Products = ({bagTypes, highlights}) => {
             </div>
             <StyledProductTabContainer className="container">
                 {bagTypes?.map((type, index) => (
-                    <ul key={index} className="p-0">
+                    <StyledProducts key={index} className="p-0">
                         {type.products?.map((product, index) => (
                             <ProductCard product={product}  key={index} />
                         ))}
-                    </ul>
+                    </StyledProducts>
                 ))}
-                {highlights?.map((highlight, index) => (
-                    <ul key={index} className="d-none">
-                        <li>
-                            <p>{highlight.title}</p>
-                            <p>{highlight.price}</p>
+                <StyledSelectedProducts>
+                    {highlights?.map((highlight, index) => (
+                        <StyledSelectedProductLI key={index}>
+                            <StyledSelectedProductContainer>
+                                <StyledSelectedProductTitle>{highlight.title}</StyledSelectedProductTitle>
+                                <StyledSelectedProductPrice>{highlight.price}</StyledSelectedProductPrice>
+                            </StyledSelectedProductContainer>
                             <Image src={highlight.image} width={84} height={84} alt="Doğum Çantası" />
-                        </li>
-                    </ul>
-                ))}
-
+                        </StyledSelectedProductLI>
+                    ))}
+                </StyledSelectedProducts>
             </StyledProductTabContainer>
         </div>
     )
