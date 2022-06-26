@@ -1,7 +1,7 @@
 import Header from "../organisms/Header";
 import Products from "../organisms/Products";
 import Video from "../organisms/Video";
-import {homepage} from "../enums";
+
 
 export default function Home({bagTypes, highlights, videos, header}) {
   return (
@@ -10,10 +10,7 @@ export default function Home({bagTypes, highlights, videos, header}) {
           <div className="container">
               <div className="row">
                   <Products bagTypes={bagTypes} highlights={highlights} />
-                  <div className="col-12 col-md-5  d-none">
-                      {homepage.VIDEO_TITLE}
-                      <Video videos={videos} />
-                  </div>
+                  <Video videos={videos} />
               </div>
           </div>
       </div>
