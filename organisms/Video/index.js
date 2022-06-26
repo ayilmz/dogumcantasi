@@ -1,5 +1,11 @@
 import {homepage} from "../../enums";
-import {StyledVideoContainer, StyledVideoTitle, StyledVideoTitleContainer, StyledYoutubePlay} from "./style";
+import {
+    StyledVideoContainer, StyledVideoItem,
+    StyledVideos,
+    StyledVideoTitle,
+    StyledVideoTitleContainer,
+    StyledYoutubePlay
+} from "./style";
 import Image from "next/image";
 
 const Products = ({videos}) => {
@@ -15,13 +21,16 @@ const Products = ({videos}) => {
                 </StyledYoutubePlay>
             </StyledVideoTitleContainer>
 
-            <ul className="d-flex justify-content-between d-none">
+            <StyledVideos>
                 {videos?.map((video, index) => (
                     <li key={index}>
+                        <StyledVideoItem>
+                            <Image src="/image/video-play.svg" width={48} height={48} alt="Youtube Play" />
+                        </StyledVideoItem>
                         <p>{video.title}</p>
                     </li>
                 ))}
-            </ul>
+            </StyledVideos>
         </StyledVideoContainer>
     )
 };

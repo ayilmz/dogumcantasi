@@ -10,6 +10,10 @@ export const StyledProduct = styled.li`
   position: relative;
   margin: 8px;
   text-align: center;
+  cursor: pointer;
+  &:hover{
+    border: 2px solid #E53732;
+  }
   p{
     position: absolute;
     bottom: 0;

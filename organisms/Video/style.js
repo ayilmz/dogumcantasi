@@ -40,3 +40,37 @@ export const StyledVideoTitle = styled.p`
   width: 50%;
   margin-top: 20px;
 `
+
+
+export const StyledVideos = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  li{
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 49%;
+    p{
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 25px;
+      color: #202F58;  
+      width: 80%;
+      padding: 19px 26px;
+      margin: 0;
+    }
+  }
+`
+export const StyledVideoItem = styled.div`
+  background: #FFF2F2;
+  border-radius: 20px;
+  height: 156px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+`;
+
+
