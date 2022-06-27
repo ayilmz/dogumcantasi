@@ -1,7 +1,7 @@
 import Header from "../organisms/Header";
 import Products from "../organisms/Products";
 import Video from "../organisms/Video";
-
+import Form from "../organisms/Form";
 
 export default function Home({bagTypes, highlights, videos, header}) {
   return (
@@ -10,7 +10,10 @@ export default function Home({bagTypes, highlights, videos, header}) {
           <div className="container">
               <div className="row">
                   <Products bagTypes={bagTypes} highlights={highlights} />
-                  <Video videos={videos} />
+                  <div  className="col-12 col-md-5">
+                      <Video videos={videos} />
+                      <Form />
+                  </div>
               </div>
           </div>
       </div>

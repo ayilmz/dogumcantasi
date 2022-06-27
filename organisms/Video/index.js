@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Products = ({videos}) => {
     return (
-        <StyledVideoContainer className="col-12 col-md-5">
+        <StyledVideoContainer>
             <StyledVideoTitleContainer>
                 <StyledVideoTitle>
                     {homepage.VIDEO_TITLE}
