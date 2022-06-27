@@ -9,7 +9,7 @@ const Header = ({header}) => {
                 </a>
                 <StyledUl>
                     {header?.map((link, index) => (
-                        <li key={index}>
+                        <li key={index} className="d-none d-md-block">
                             <a href={link.link}>{link.text}</a>
                         </li>
                     ))}

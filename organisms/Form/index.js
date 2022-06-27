@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import WhatsApp from "../WhatsApp";
 import {StyledForm, StyledFormContainer, StyledProgress} from "./style"
 
 const Form = () => {
@@ -69,6 +70,7 @@ const Form = () => {
                             </li>
                         </ul>
                     </StyledForm>
+                    <WhatsApp />
                 </StyledFormContainer>
             </div>
         </div>

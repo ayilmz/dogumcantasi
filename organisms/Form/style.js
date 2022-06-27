@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const StyledFormContainer = styled.div`
   background: #FFE0D9;
   border: 4px solid #FFFFFF;
-  border-radius: 24px 24px 0 0 ;
+  border-radius: 24px 24px 24px 0 ;
   margin-top: 32px;
   padding: 32px;
   display: inline-block;
+  position: relative;
 `;
 
 export const StyledProgress = styled.ul`
