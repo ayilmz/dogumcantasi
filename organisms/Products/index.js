@@ -31,11 +31,13 @@ const Products = ({bagTypes, highlights}) => {
             </div>
             <StyledProductTabContainer className="container">
                 {bagTypes?.map((type, index) => (
-                    <StyledProducts key={index} className="p-0">
-                        {type.products?.map((product, index) => (
-                            <ProductCard product={product}  key={index} />
-                        ))}
-                    </StyledProducts>
+                    (type.products && (
+                        <StyledProducts key={index} className="p-0">
+                            {type.products?.map((product, index) => (
+                                <ProductCard product={product}  key={index} />
+                            ))}
+                        </StyledProducts>
+                    ))
                 ))}
                 <StyledSelectedProducts>
                     {highlights?.map((highlight, index) => (

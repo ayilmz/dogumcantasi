@@ -61,6 +61,7 @@ export const StyledProductTabContainer = styled.div`
   border: 5px solid #FFE0D9;
   border-radius: 24px 24px 0 24px;
   padding: 0;
+  margin-bottom: 50px;
 `;
 
 export const StyledProducts = styled.ul`
@@ -68,6 +69,8 @@ export const StyledProducts = styled.ul`
   border-radius: 24px;
   margin: 0;
   padding: 0;
+  height: 520px;
+  overflow: scroll;
 `;
 
 export const StyledSelectedProducts = styled.ul`
