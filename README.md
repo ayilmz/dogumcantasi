@@ -1,1 +1,2 @@
-Please click the [https://dogumcantasi.vercel.app/](https://dogumcantasi.vercel.app/) for development.
+Please click the [https://dogumcantasi.vercel.app](https://dogumcantasi.vercel.app) for the request form.
+Please click the [https://dogumcantasi.vercel.app/main](https://dogumcantasi.vercel.app/main) for the homepage.
