@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link'
 import { useForm } from "react-hook-form";
 
 export default function RequestForm() {
@@ -7,9 +8,9 @@ export default function RequestForm() {
     <div className="container">
         <div className="row">
             <div className="col-6">
-                <a href="/" className="d-inline-flex">
+                <Link href="/" className="d-inline-flex">
                     <Image src="/image/dogum-cantasi-logo-white.svg" width={298} height={61} alt="Doğum Çantası" />
-                </a>
+                </Link>
             </div>
             <div className="col-6">
                 <p>40 Hafta’ya kadar yanınızda olacak</p>
@@ -57,7 +58,7 @@ export default function RequestForm() {
                         <input {...register("Kisisel Verilerim", {required: true})} type="checkbox" value="Yes"
                                id="kisisel"/>
                         <label htmlFor="kisisel">
-                            Kişisel verilerimin <a href="#">kullanım koşullarında</a> belirtilen amaçlar için
+                            Kişisel verilerimin <Link href="#">kullanım koşullarında</Link> belirtilen amaçlar için
                             işlenmesine onay veriyorum.
                         </label>
                     </li>
