@@ -3,11 +3,18 @@ import styled from 'styled-components';
 export const StyledPromotionContainer = styled.div`
   position: absolute;
   left: -170px;
+  @media (max-width: 768px) {
+    left: auto;
+    right: -60px;
+    top: -100px;
+    transform: scale(0.8);
+  } 
   p{
     position: absolute;
     left: 25%;
     top: 37%;
     z-index: 1;
+    
     
     span{
       display: block;
