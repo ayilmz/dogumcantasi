@@ -1,15 +1,23 @@
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Link from 'next/link'
-import {InputText, InputSelect, InputCheckbox, InputSubmit} from "../../ui/form-elements";
-import {StyledContainer, StyledTitle, StyledSubTitle} from "./style";
+import {formElements} from "../../enums"
+import {
+    StyledContainer,
+    StyledTitle,
+    StyledSubTitle,
+    StyledInputText,
+    StyledInputTitle,
+    StyledInputSelect,
+    StyledInputSubmit,
+    StyledErrorMessage
+} from "./style";
 import PromotionInformation from "../PromotionInformation";
 import ThumbnailContainer from "../ThumbnailContainer";
 
 const Form = ({isMobile}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
-    console.log(errors);
     return (
         <div className="row">
             <div className="col-12 col-md-5 mt-5">
@@ -33,46 +41,66 @@ const Form = ({isMobile}) => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <ul>
                             <li>
-                                <InputText placeHolder="" name="Anne Adı Soyadı" register={{...register("Anne Adı Soyadı", {required: true, maxLength: 80})}} />
+                                <StyledInputTitle>{formElements.MOTHER_NAME_SURNAME.title}</StyledInputTitle>
+                                {errors[formElements.MOTHER_NAME_SURNAME.name] && (
+                                    <StyledErrorMessage>{errors.motherNameSurname?.message}</StyledErrorMessage>
+                                )}
+                                <StyledInputText {...register(formElements.MOTHER_NAME_SURNAME.name, {required: formElements.MOTHER_NAME_SURNAME.errorMessage, maxLength: 80})}/>
                             </li>
+
+
                             <li>
                                 <div className="row d-flex align-items-end">
-                                    <div className="col-6">
-                                        <InputText placeholder="" name="Gebelik Durumu" {...register("Gebelik Durumu", {required: true, maxLength: 80})} />
+                                    <div className="col-12">
+                                        <StyledInputTitle>{formElements.TOTAL_MONTH.title}</StyledInputTitle>
+                                        {errors[formElements.TOTAL_MONTH.name] && (
+                                            <StyledErrorMessage>{errors.totalMonth?.message}</StyledErrorMessage>
+                                        )}
                                     </div>
                                     <div className="col-6">
-                                        <InputSelect register={{...register("Anne Bedeni", { required: true })}}>
+                                        <StyledInputText {...register(formElements.TOTAL_MONTH.name, {required: formElements.TOTAL_MONTH.errorMessage, maxLength: 80})}/>
+                                    </div>
+                                    <div className="col-6">
+                                        <StyledInputSelect type="select" {...register("Anne Bedeni", { required: true })}>
                                             <option value="S">Aylık</option>
                                             <option value="M">Haftalık</option>
-                                        </InputSelect>
+                                        </StyledInputSelect>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <InputSelect name="En Fazla Destek Almak İstediğiniz Konu" register={{...register("Anne Bedeni", { required: true })}}>
+                                <StyledInputTitle>En Fazla Destek Almak İstediğiniz Konu</StyledInputTitle>
+                                <StyledInputSelect type="select" {...register("supportTopic", {required: "Email Address is required"})}>
                                     <option value="S">Hastana Çıkışı</option>
                                     <option value="M">Haftalık</option>
-                                </InputSelect>
+                                </StyledInputSelect>
+                                {errors.supportTopic?.message}
                             </li>
                             <li>
-                                <InputText placeHolder="" name="Telefon" register={{...register("Telefon", {required: true, maxLength: 80})}} />
+                                <StyledInputTitle>Telefon</StyledInputTitle>
+                                {errors.phone && (
+                                    <StyledErrorMessage>{errors.phone?.message}</StyledErrorMessage>
+                                )}
+                                <StyledInputText {...register("phone", {required: "Telefon numaranızı giriniz ", maxLength: 80})}/>
                             </li>
                             <li>
-                                <InputText placeHolder="" name="E-Posta Adresi" register={{...register("E-Posta Adresi", {required: true, maxLength: 80})}} />
+                                <StyledInputTitle>E-Posta Adresi</StyledInputTitle>
+                                {errors.mail && (
+                                    <StyledErrorMessage>{errors.mail?.message}</StyledErrorMessage>
+                                )}
+                                <StyledInputText {...register("mail", {required: "E-mail adresinizi giriniz", maxLength: 80})}/>
                             </li>
                             <li>
-                                <InputText placeHolder="" name="Adres" register={{...register("Adres", {required: true, maxLength: 80})}} />
+                                <StyledInputTitle>Adres</StyledInputTitle>
+                                {errors.address && (
+                                    <StyledErrorMessage>{errors.address?.message}</StyledErrorMessage>
+                                )}
+                                <StyledInputText {...register("address", {required: "Adresinizi Giriniz", maxLength: 80})}/>
                             </li>
                         </ul>
                         <ul>
-                            <li className="d-flex">
-                                <InputCheckbox register={{...register("Kisisel Verilerim", {required: true})}}  value="Yes" id="kisisel">
-                                    Kişisel verilerimin <Link href="#">kullanım koşullarında</Link> belirtilen amaçlar için
-                                    işlenmesine onay veriyorum.
-                                </InputCheckbox>
-                            </li>
                             <li>
-                                <InputSubmit type="submit" value="Devam Et"/>
+                                <StyledInputSubmit type="submit" value="Devam Et"/>
                             </li>
                         </ul>
                     </form>

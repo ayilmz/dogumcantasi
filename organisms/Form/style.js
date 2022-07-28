@@ -80,7 +80,7 @@ export const StyledForm = styled.form`
         -moz-appearance: none;
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01Ljk4MTI3IDcuMDNDNS43MTU1OSA3LjAzIDUuNDQ5OTEgNi45MzIxMiA1LjI0MDE2IDYuNzIyMzdMMC4zMDQxMzIgMS43ODYzNEMtMC4xMDEzNzcgMS4zODA4MyAtMC4xMDEzNzcgMC43MDk2NDIgMC4zMDQxMzIgMC4zMDQxMzJDMC43MDk2NDIgLTAuMTAxMzc3IDEuMzgwODMgLTAuMTAxMzc3IDEuNzg2MzQgMC4zMDQxMzJMNS45ODEyNyA0LjQ5OTA2TDEwLjE3NjIgMC4zMDQxMzJDMTAuNTgxNyAtMC4xMDEzNzcgMTEuMjUyOSAtMC4xMDEzNzcgMTEuNjU4NCAwLjMwNDEzMkMxMi4wNjM5IDAuNzA5NjQyIDEyLjA2MzkgMS4zODA4MyAxMS42NTg0IDEuNzg2MzRMNi43MjIzNyA2LjcyMjM3QzYuNTEyNjIgNi45MzIxMiA2LjI0Njk1IDcuMDMgNS45ODEyNyA3LjAzWiIgZmlsbD0iIzIwMkY1OCIvPgo8L3N2Zz4K);
         background-repeat: no-repeat;
-        background-position-x: 90%;
+        background-position-x: calc(100% - 15px);
         background-position-y: 15px;
       }
     }
