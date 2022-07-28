@@ -1,9 +1,6 @@
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Link from 'next/link'
-import "swiper/css";
-import "swiper/css/pagination";
-
 import {InputText, InputSelect, InputCheckbox, InputSubmit} from "../../ui/form-elements";
 import {StyledContainer, StyledTitle, StyledSubTitle} from "./style";
 import PromotionInformation from "../PromotionInformation";
@@ -23,13 +20,10 @@ const Form = ({isMobile}) => {
                         </Link>
                     </div>
 
-                    <div className="col-12 mt-5">
+                    <div className="col-12 mt-3">
                         <ThumbnailContainer isMobile={isMobile} />
                     </div>
                 </div>
-                
-
-                
             </div>
             <div className="col-12 col-md-7">
                 <StyledContainer>

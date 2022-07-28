@@ -1,20 +1,33 @@
-import React, {Component} from 'react';
-import {Swiper, SwiperSlide} from "swiper/react";
+import React from 'react';
+import {SwiperSlide} from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+
+import {Pagination} from "swiper";
+
 import Thumbnails from "../Thumbnails";
+
+import {StyledSwiperContainer} from "./style";
 
 const ThumbnailContainer = ({isMobile}) => {
     return (
         isMobile ? (
-            <Swiper
+            <StyledSwiperContainer
+                pagination={true}
+                modules={[Pagination]}
                 slidesPerView={2.3}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             >
-                <SwiperSlide><Thumbnails selected /></SwiperSlide>
-                <SwiperSlide><Thumbnails /></SwiperSlide>
-                <SwiperSlide><Thumbnails /></SwiperSlide>
-                <SwiperSlide><Thumbnails /></SwiperSlide>
-            </Swiper>
+                <SwiperSlide><Thumbnails selected isMobile /></SwiperSlide>
+                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
+                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
+                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
+                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
+                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
+                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
+                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
+            </StyledSwiperContainer>
         ):(
             <>
                 <Thumbnails selected />
