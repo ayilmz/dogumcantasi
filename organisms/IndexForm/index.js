@@ -62,40 +62,40 @@ const Form = ({isMobile}) => {
                                     </div>
                                     <div className="col-6">
                                         <StyledInputSelect type="select" {...register("Anne Bedeni", { required: true })}>
-                                            <option value="S">Aylık</option>
-                                            <option value="M">Haftalık</option>
+                                            <option value="Aylık">Aylık</option>
+                                            <option value="Haftalık">Haftalık</option>
                                         </StyledInputSelect>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <StyledInputTitle>En Fazla Destek Almak İstediğiniz Konu</StyledInputTitle>
-                                <StyledInputSelect type="select" {...register("supportTopic", {required: "Email Address is required"})}>
-                                    <option value="S">Hastana Çıkışı</option>
-                                    <option value="M">Haftalık</option>
+                                <StyledInputTitle>{formElements.SUPPORT_TOPIC.title}</StyledInputTitle>
+                                <StyledInputSelect type="select" {...register(formElements.SUPPORT_TOPIC.name, {required: formElements.SUPPORT_TOPIC.errorMessage})}>
+                                    <option value="Hastana Çıkışı">Hastana Çıkışı</option>
+                                    <option value="Haftalık">Haftalık</option>
                                 </StyledInputSelect>
                                 {errors.supportTopic?.message}
                             </li>
                             <li>
-                                <StyledInputTitle>Telefon</StyledInputTitle>
-                                {errors.phone && (
-                                    <StyledErrorMessage>{errors.phone?.message}</StyledErrorMessage>
+                                <StyledInputTitle>{formElements.PHONE.title}</StyledInputTitle>
+                                {errors[formElements.PHONE.name] && (
+                                    <StyledErrorMessage>{errors[formElements.PHONE.name]?.message}</StyledErrorMessage>
                                 )}
-                                <StyledInputText {...register("phone", {required: "Telefon numaranızı giriniz ", maxLength: 80})}/>
+                                <StyledInputText {...register(formElements.PHONE.name, {required: formElements.PHONE.errorMessage, maxLength: 80})}/>
                             </li>
                             <li>
-                                <StyledInputTitle>E-Posta Adresi</StyledInputTitle>
-                                {errors.mail && (
-                                    <StyledErrorMessage>{errors.mail?.message}</StyledErrorMessage>
+                                <StyledInputTitle>{formElements.EMAIL.title}</StyledInputTitle>
+                                {errors[formElements.EMAIL.name] && (
+                                    <StyledErrorMessage>{errors[formElements.EMAIL.name]?.message}</StyledErrorMessage>
                                 )}
-                                <StyledInputText {...register("mail", {required: "E-mail adresinizi giriniz", maxLength: 80})}/>
+                                <StyledInputText {...register(formElements.EMAIL.name, {required: formElements.EMAIL.errorMessage, maxLength: 80})}/>
                             </li>
                             <li>
-                                <StyledInputTitle>Adres</StyledInputTitle>
-                                {errors.address && (
-                                    <StyledErrorMessage>{errors.address?.message}</StyledErrorMessage>
+                                <StyledInputTitle>{formElements.ADDRESS.title}</StyledInputTitle>
+                                {errors[formElements.ADDRESS.name] && (
+                                    <StyledErrorMessage>{errors[formElements.ADDRESS.name]?.message}</StyledErrorMessage>
                                 )}
-                                <StyledInputText {...register("address", {required: "Adresinizi Giriniz", maxLength: 80})}/>
+                                <StyledInputText {...register(formElements.ADDRESS.name, {required: formElements.ADDRESS.errorMessage, maxLength: 80})}/>
                             </li>
                         </ul>
                         <ul>

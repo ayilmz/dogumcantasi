@@ -11,5 +11,25 @@ export const formElements = {
     name:"totalMonth",
     title:"Gebelik Durumu",
     errorMessage: "* zorunlu alan"
+  },
+  SUPPORT_TOPIC:{
+    name:"supportTopic",
+    title:"En Fazla Destek Almak İstediğiniz Konu",
+    errorMessage: "* zorunlu alan"
+  },
+  PHONE:{
+    name:"phone",
+    title:"Telefon",
+    errorMessage: "* zorunlu alan"
+  },
+  EMAIL:{
+    name:"email",
+    title:"E-Posta Adresi",
+    errorMessage: "* zorunlu alan"
+  },
+  ADDRESS:{
+    name:"address",
+    title:"Adres",
+    errorMessage: "* zorunlu alan"
   }
 }
