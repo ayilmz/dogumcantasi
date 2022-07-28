@@ -1,10 +1,23 @@
-import IndexForm from "../organisms/IndexForm"
+import IndexForm from "../organisms/IndexForm";
 
-export default function RequestForm() {
+import {getPageProps} from "../utils";
+
+export default function RequestForm({isMobile}) {
   return (
     <div className="container">
-        <IndexForm />
-        
+        <IndexForm isMobile={isMobile}/>
     </div>
   )
+}
+
+
+export async function getServerSideProps(ctx) {
+    const pageProps = getPageProps(ctx);
+
+    console.log("pageProps", pageProps)
+    return {
+        props: {
+            ...pageProps
+        }
+    }
 }

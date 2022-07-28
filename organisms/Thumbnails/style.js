@@ -4,11 +4,10 @@ export const StyledContainer = styled.div`
   position: relative;
   float: left;
   margin: 0 20px 20px 0;
-  img{
+  img.border-image{
     z-index: 1;
   }
 `
-
 
 export const StyledBlueBackground = styled.div`
   width: 208px;
@@ -18,4 +17,9 @@ export const StyledBlueBackground = styled.div`
   position: absolute;
   top: 5px;
   z-index: 0;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `

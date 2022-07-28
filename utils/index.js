@@ -1,0 +1,1 @@
+export { getPageProps } from './getPageProps';

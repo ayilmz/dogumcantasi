@@ -1,13 +1,15 @@
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Link from 'next/link'
+import "swiper/css";
+import "swiper/css/pagination";
 
 import {InputText, InputSelect, InputCheckbox, InputSubmit} from "../../ui/form-elements";
 import {StyledContainer, StyledTitle, StyledSubTitle} from "./style";
 import PromotionInformation from "../PromotionInformation";
-import Thumbnails from "../Thumbnails";
+import ThumbnailContainer from "../ThumbnailContainer";
 
-const Form = () => {
+const Form = ({isMobile}) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
     console.log(errors);
@@ -21,14 +23,8 @@ const Form = () => {
                         </Link>
                     </div>
 
-                    <div className="col-12 mt-5 d-none d-md-block">
-                        <Thumbnails selected />
-                        <Thumbnails />
-                        <Thumbnails />
-                        <Thumbnails />
-                        <Thumbnails />
-                        <Thumbnails />
-                        
+                    <div className="col-12 mt-5">
+                        <ThumbnailContainer isMobile={isMobile} />
                     </div>
                 </div>
                 

@@ -5,8 +5,9 @@ import {StyledContainer, StyledBlueBackground} from "./style";
 const Thumbnails = ({selected}) => {
     return (
         <StyledContainer>
-            <Image src="/image/thumbnail-border.png" width={208} height={143} alt="Doğum Çantası" border="1" />
-            <StyledBlueBackground selected={selected}/>
+            <Image className="border-image" src="/image/thumbnail-border.png" width={208} height={143} alt="Doğum Çantası" border="1" />
+            <StyledBlueBackground selected={selected}>
+            </StyledBlueBackground>
         </StyledContainer>
     );
 };
