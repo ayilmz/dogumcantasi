@@ -97,6 +97,7 @@ export const StyledContainer = styled.div`
     border-radius: 24px;
     border: 4px solid #FFE0D9;
     margin-top: 40px;
+    margin-bottom: 40px;
   } 
   ul{
     padding: 0 70px;

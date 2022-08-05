@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import {Pagination} from "swiper";
 
 import Thumbnails from "../Thumbnails";
+import {thumbnails} from "./thumbnails";
 
 import {StyledSwiperContainer} from "./style";
 
@@ -19,23 +20,18 @@ const ThumbnailContainer = ({isMobile}) => {
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             >
-                <SwiperSlide><Thumbnails selected isMobile /></SwiperSlide>
-                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
-                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
-                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
-                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
-                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
-                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
-                <SwiperSlide><Thumbnails isMobile/></SwiperSlide>
+                {thumbnails.map((thumbnail) => (
+                    <SwiperSlide>
+                        <Thumbnails isMobile thumbnail={thumbnail} />
+                    </SwiperSlide>
+
+                ))}
             </StyledSwiperContainer>
         ):(
             <>
-                <Thumbnails selected />
-                <Thumbnails/>
-                <Thumbnails/>
-                <Thumbnails/>
-                <Thumbnails/>
-                <Thumbnails/>
+                {thumbnails.map((thumbnail, index) => (
+                    <Thumbnails thumbnail={thumbnail}  key={index}/>
+                ))}
             </>
         )
     );
